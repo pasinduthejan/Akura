@@ -1,0 +1,47 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened class="sidenav">
+
+    <div class="header">
+      <img src="../assets/img/akura_logo.png" class="logo" alt="">
+    </div>
+
+    <div class='mybtn'>
+      <div><button mat-stroked-button routerLink="schHeared">Scholarship</button></div>
+      <div><button mat-stroked-button routerLink="projectHeared">Project</button></div>
+      <div><button mat-stroked-button routerLink="financeHeared">Manage Finance</button></div>
+      
+      <div><button mat-stroked-button>Apply Workshop</button></div>
+    </div>
+  </mat-drawer>
+
+  <mat-drawer-content>
+
+    <mat-toolbar class="menubar">
+
+      <span class="welcome">
+        <h6><span>Dashboard</span> </h6>
+      </span>
+      <!-- This fills the remaining space of the current row -->
+      <span class="example-fill-remaining-space"></span>
+      <span class="notification">
+
+        <button mat-button [matMenuTriggerFor]="notification"><i class="material-icons">notifications</i></button>
+        <mat-menu #notification="matMenu">
+          <button mat-menu-item *ngFor="let notification of notifications">{{notification}}</button>
+        </mat-menu>
+      </span>
+
+      <span class="user">
+        <button mat-button [matMenuTriggerFor]="menu"><i class="material-icons">person</i></button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Setting</button>
+          <button mat-menu-item (click)='logOut()'>Logout</button>
+        </mat-menu>
+      </span>
+    </mat-toolbar>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-drawer-content>
+</mat-drawer-container>

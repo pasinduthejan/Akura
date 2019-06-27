@@ -1,0 +1,63 @@
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+
+.example-fill-remaining {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+
+  mat-drawer-container, mat-drawer{
+      height: 100%;
+  }
+  
+  mat-drawer{
+      width: 15%;
+  }
+
+  .menubar{
+    background-color: darkslategrey;
+    
+  }
+
+  .notification{
+      padding: 10px 20px;
+  }
+
+.sidenav{
+    background-color: darkslategrey;
+    text-align: left;
+}
+
+.mybtn button{
+    text-align: left;
+}
+.header{
+    padding: 10px 20px;
+    
+}
+
+.logo{
+    width: 150px;
+    height: 45px;
+}
+
+.user{
+    padding-right: 20px;
+}
+
+.welcome{
+    font-style: none;
+}
+
+button{
+    width: 100%;
+    
+}
+
+a{
+    color: black;
+}

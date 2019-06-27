@@ -1,0 +1,99 @@
+<div class="container">
+
+
+
+  <div class="d-flex justify-content-center">
+    <h3>Scholarship Applycation form</h3>
+  </div>
+
+  <hr>
+
+  <div class="d-flex justify-content-center">
+
+    <form #stuApplyForm="ngForm">
+      <div class="form-group">
+        <label>Full Name:</label>
+        <input type="text" placeholder="full name" #name="ngModel" [class.is-invalid]="name.invalid  && name.touched"
+          class="form-control" name="fName" required ngModel>
+        <small class="text-danger" [class.d-none]="name.valid || name.untouched">*Name is required</small>
+      </div>
+
+      <div class="form-group">
+        <label> Permenent address:</label>
+        <textarea name="address" #address="ngModel" [class.is-invalid]="address.invalid && address.touched" rows="5"
+          cols="80" class="form-control" name="address" required ngModel></textarea>
+        <small class="text-danger" [class.d-none]="address.valid || address.untouched">*Address is required</small>
+      </div>
+
+      <div class="form-group">
+        <label>National Identity card No(If any):</label>
+        <input type="text" #nic="ngModel" pattern="^\d{9}(V|v)$" [class.is-invalid]="nic.invalid && nic.touched"
+          class="form-control" name="nic" ngModel>
+       <!-- <div *ngIf="nic.errors && (nic.invlid || nic.touched)">
+          <small class="text-danger" *ngIf="nic.errors.required"> *NIC is required</small>
+          <small class="text-danger" *ngIf="nic.errors.pattern">NIC number must be 9 digits</small>
+        </div>-->
+
+      </div>
+
+
+      <div class="form-group">
+        <label> Fixed telephone No:</label>
+        <input type="text" #tNo="ngModel" pattern="^\d{10}$" required [class.is-invalid]="tNo.invalid && tNo.touched"
+          class="form-control" name="tNo" ngModel>
+        <!--<small class="text-danger" [class.d-none]="tNo.valid || tNo.untouched"> *phone number must be 10 digits</small>-->
+        <!--<div *ngIf="tNo.errors && (tNo.invlid || tNo.touched)">
+          <small class="text-danger" *ngIf="tNo.errors.required">Phone number is required</small>
+          <small class="text-danger" *ngIf="tNo.errors.pattern">Phone number must be 10 digits</small>
+
+        </div>-->
+      </div>
+
+      <div class="form-group">
+        <label> Mobile No: </label>
+        <input type="text" #mNo="ngModel" pattern="^\d{10}$" required [class.is-invalid]="mNo.invalid && mNo.touched"
+          class="form-control" name="mNo" ngModel>
+      <!-- <div *ngIf="mNo.errors && (mNo.invlid || mNo.touched)">
+          <small class="text-danger" *ngIf="mNo.errors.required">Mobile number is required</small>
+          <small class="text-danger" *ngIf="mNo.errors.pattern">Mobile number must be 10 digits</small>
+        </div>--> 
+      </div>
+
+      <!--<div class="form-group">
+                <label>Citizenship:</label>
+                <select class="form-control" required>
+                    <option>Sri Lanka</option>
+                    <option>Another country</option>
+                </select>
+              </div>-->
+      <div class="form-group">
+        <label>Citizenship:</label><br>
+        <select (blur)="validateTopic(topic.value)" (change)="validateTopic(topic.value)" #topic="ngModel"
+          [class.is-invalid]="topicHasError && topic.touched" name="topic" class="custom-select" ngModel name="topic">
+          <option value="default">Select Your country</option>
+          <option *ngFor="let topic of topics">{{ topic }}</option>
+        </select>
+        <small class="text-danger" [class.d-none]="!topicHasError.valid || topic.untouched">please choose a toic</small>
+      </div>
+
+      <div class="form-group">
+        <label> Gender:</label><br>
+        <input type="radio" name="gender" value="male">Male<br>
+        <input type="radio" name="gender" value="fmale">Female<br><br>
+      </div>
+
+      <div class="form-group">
+        <label>Date Of Birth: </label>
+        <input type="date" #Dob="ngModel" [class.is-invalid]="Dob.invalid  && Dob.touched" class="form-control"
+          name="Dob" ngModel required>
+        <small class="text-danger" [class.d-none]="Dob.valid || Dob.untouched">*Date of birth is required</small>
+      </div>
+
+      <div class="form-group">
+
+        <a routerLink="../schApplyForm2"><button [disabled]="false" class="btn btn-primary">Next</button></a>
+      </div>
+    </form>
+  </div>
+
+</div>

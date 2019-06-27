@@ -1,0 +1,61 @@
+<div class="container">
+  <h3>
+    <u>
+      Create New Project
+    </u>
+  </h3>
+  <form #projectForm="ngForm">
+
+    <div class="form-group">
+      <label for="usr">Project Name:</label>
+      <input type="text" required #projectName="ngModel"
+        [class.is-invalid]="projectName.invalid && projectName.touched " class="form-control" name="projectName"
+        ngModel>
+      <small class="text-danger" [class.d-none]=" projectName.valid || projectName.untouched ">*Project name is
+        required</small>
+    </div>
+
+    <div class="form-group">
+      <label for="usr">Project Manager Name:</label>
+      <input type="text" required #managerName="ngModel"
+        [class.is-invalid]="managerName.invalid && managerName.touched " class="form-control" name="managerName"
+        ngModel>
+      <small class="text-danger" [class.d-none]=" managerName.valid || managerName.untouched ">*Project manager name is
+        required</small>
+    </div>
+
+    <div class="form-group">
+      <label for="usr">Start Date:</label>
+      <input type="date" required #startDate="ngModel" [class.is-invalid]="startDate.invalid && startDate.touched "
+        class="form-control" name="startDate" ngModel>
+      <small class="text-danger" [class.d-none]=" startDate.valid || startDate.untouched ">*Date required</small>
+    </div>
+
+    <div class="form-group">
+      <label for="usr">End Date:</label>
+      <input type="date" class="form-control" required #endDate="ngModel"
+        [class.is-invalid]="endDate.invalid && endDate.touched " name="endDate" ngModel>
+      <small class="text-danger" [class.d-none]=" endDate.valid || endDate.untouched ">*Date required</small>
+    </div>
+
+    <div class="form-group">
+      <label for="usr">Location:</label>
+      <input type="text" class="form-control" required #location="ngModel"
+        [class.is-invalid]="location.invalid && location.touched " name="location" ngModel>
+      <small class="text-danger" [class.d-none]=" location.valid || location.untouched ">*Location required</small>
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Description:</label>
+      <textarea class="form-control" rows="5" required #discription="ngModel"
+        [class.is-invalid]="discription.invalid && discription.touched " name="discription" ngModel></textarea>
+      <small class="text-danger" [class.d-none]=" discription.valid || discription.untouched ">*Discription
+        required</small><br>
+    </div>
+
+    <div class="form-group">
+      <input type="button" [disabled]="projectForm.form.invalid" class="btn btn-info" value="ADD DTAILS">
+    </div>
+
+  </form>
+</div>

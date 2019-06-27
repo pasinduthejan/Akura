@@ -1,0 +1,101 @@
+<div class="container">
+    <form class="form-inline">
+    <div class="row">
+    <div class="col">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">SELECT</label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect01">
+        <option selected> DISTRICT</option>
+        <option value="1">Galle</option>
+        <option value="2">Mathara</option>
+        <option value="3">Hambantota</option>
+        <option value="4">Gampaha</option>
+        <option value="5">Colombo</option>
+        <option value="6">Kaluthara</option>
+        <option value="7">Anuaradapura</option>
+        <option value="8">Polonnaruwa</option>
+        <option value="9">Badulla</option>
+        <option value="10">Monaragala</option>
+        <option value="11">Mathale</option>
+        <option value="13">Mahanuwara</option>
+        <option value="8">Polonnaruwa</option>
+        <option value="9">Badulla</option>
+        <option value="10">Monaragala</option>
+        <option value="11">Mathale</option>
+        <option value="13">Mahanuwara</option>
+    
+      </select>
+    </div>
+  </div>
+  <div class="col">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">SELECT</label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect01">
+        <option selected>SUBJECT</option>
+        <option value="1">Maths</option>
+        <option value="2">Science</option>
+        <option value="3">History</option>
+      
+        <option value="1">Information technology</option>
+        <option value="2">EnglishLiterature</option>
+        <option value="3">Tamil</option>
+      </select><br>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col">
+      <div class="form-group">
+        <label for="usr">DATE</label>
+        <input type="date" required #startDate="ngModel" [class.is-invalid]="startDate.invalid && startDate.touched " class="form-control" name="startDate" ngModel>
+        <small class="text-danger" [class.d-none]=" startDate.valid || startDate.untouched ">*Date required</small>
+      </div>
+      </div>
+    </div>
+    </div>
+    </form>
+    </div>
+    
+    <div class="container">
+    <form >
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">District</th>
+              <th scope="col">Subject</th>
+              <th scope="col">Date</th>
+              <th scope="col">Participate?(Yes/No)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><input type="checkbox" ></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><input type="checkbox" ></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><input type="checkbox" ></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+    </form>
+    </div>

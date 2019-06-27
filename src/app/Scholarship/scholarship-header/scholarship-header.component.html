@@ -1,0 +1,10 @@
+<div>
+  <div>
+    <nav mat-tab-nav-bar >
+        <a mat-tab-link routerLink="schApplyForm1" (click)="activeLink = links[0]" [active]="activeLink ==links[0]">{{links[0]}}</a>
+        <a mat-tab-link routerLink="upProgRepo" (click)="activeLink = links[1]" [active]="activeLink ==links[1]">{{links[1]}}</a>
+    </nav>
+  
+    <router-outlet></router-outlet>
+  </div>
+</div>
